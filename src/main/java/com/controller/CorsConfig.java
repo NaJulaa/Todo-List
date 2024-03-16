@@ -1,4 +1,4 @@
-package com.DesafioNucleo.controller;
+package com.controller;
 
 
 import org.springframework.context.annotation.Configuration;

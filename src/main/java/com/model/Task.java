@@ -1,4 +1,4 @@
-package com.DesafioNucleo.model;
+package com.model;
 
 
 

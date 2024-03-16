@@ -3,6 +3,7 @@ const formulario = document.querySelector("form");
 const Iemail = document.querySelector(".email");
 const Isenha = document.querySelector(".senha");
 const Inome = document.querySelector(".nome")
+
 // Página Login
 function logar (){
     fetch("http://localhost:5432/logar",
@@ -33,6 +34,15 @@ formulario.addEventListener('submit', function(event){
     limpar();
 })
 
+//TelaPrincipal
+// function toggleSidebar() {
+//     var sidebar = document.getElementById("sidebar");
+//     if (sidebar.style.width === "50px") {
+//       sidebar.style.width = "250px";
+//     } else {
+//       sidebar.style.width = "50px";
+//     }
+//   }
 
 // Cadastro
 function cadastrar(){

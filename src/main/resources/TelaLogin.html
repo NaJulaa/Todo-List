@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap">
-    <script src="static\Telas.js" defer></script>
+    <!-- <script src="static\Telas.js" defer></script> -->
     <link rel="stylesheet" href="TelaLogin.css">
     <title>To-do</title>
 </head>
 <body>
-    <div class="login">
-        <h1>Login</h1>
-        <form action="">
-            <!-- Nome: <span th:text="${nome}">*66</span> -->
-            <input type="text" class="email" name="email" placeholder="E-mail" /*th:value="${user.email}"*/>
-            <input type="text" class="senha" name="senha" placeholder="Senha">
-            <p class = "link">
-                Ainda não tem conta?
-                <a href="TelaCadastro.html"> Cadastre-se</a>
-            </p>    
-            <button class="Logar">Entrar</button>
-        </form>
+    <div class="form-box">
+        <div class="login">
+            <h1>Login</h1>
+            <form action="">
+                <!-- Nome: <span th:text="${nome}">*66</span> -->
+                <input type="text" class="email" name="email" placeholder="E-mail" /*th:value="${user.email}"*/>
+                <input type="text" class="senha" name="senha" placeholder="Senha">
+                <p class = "link">
+                    Ainda não tem conta?
+                    <a href="TelaCadastro.html"> Cadastre-se</a>
+                </p>    
+                <button class="Logar">Entrar</button>
+            </form>
+            <script src="Telas.js"></script>
+        </div>
     </div>
 </body>
 </html>

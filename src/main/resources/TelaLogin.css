@@ -4,6 +4,22 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.form-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 450px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -12,6 +28,7 @@ h1{
 
 body{
     background-color: bisque;
+    background-image: url('./img/back1.png');
 }
 
 .login, form{
@@ -44,11 +61,65 @@ button{
     transform: scale(1.05);
 }
 
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+  }
+  
+  .sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    margin-left: 50px;
+    padding: 20px;
+  }
+  
+  .expand-btn {
+    position: flex;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
 
 TelaCadastro *{
     margin: 0 auto 0 auto;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 450px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 TelaCadastro h1{
@@ -58,6 +129,7 @@ TelaCadastro h1{
 
 TelaCadastro body{
     background-color: bisque;
+    background-image: url('./img/back1.png');
 }
 
 .cadastro, form{

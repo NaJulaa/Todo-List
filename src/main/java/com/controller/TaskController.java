@@ -1,4 +1,4 @@
-package com.DesafioNucleo.controller;
+package com.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.DesafioNucleo.model.Task;
-import com.DesafioNucleo.model.TaskRepository;
+import com.model.Task;
+import com.model.TaskRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
