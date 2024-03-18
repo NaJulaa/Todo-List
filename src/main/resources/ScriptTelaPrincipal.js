@@ -1,59 +1,39 @@
+const form = document.getElementById('form');
+        const taskInput = document.getElementById('task');
+        const tasks = document.getElementById('tasks');
 
-const button = document.querySelector('.adicionarTask')
-const input = document.querySelector('.input-task')
-const allTasks = document.querySelector('.list-task')
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-let minhasTasks = []
+            if (taskInput.value === '') {
+                return;
+            }
 
-function adicionaTask(){ 
-    minhasTasks.push({
+            const task = document.createElement('li');
+            task.innerHTML = `
+                <input type="checkbox">
+                <p>${taskInput.value}</p>
+                <button type="button">Delete</button>`;
 
-        tarefa:input.value,
-        fechada:false
-        
-    })
+            task.querySelector('input[type="checkbox"]').addEventListener('change', toggleDone);
+            task.querySelector('button').addEventListener('click', removeTask);
 
-    input.value = ''
+            tasks.appendChild(task);
 
-    mostrarTasks()
+            taskInput.value = '';
+        });
 
-} 
+        function toggleDone(e) {
+            const task = e.target.parentNode;
+            task.querySelector('p').classList.toggle('done');
+        }
 
+        function removeTask(e) {
+            const task = e.target.parentNode;
+            tasks.removeChild(task);
+        }
 
-function mostrarTasks(){
-
-    let novaLI = ''
-
-    minhasTasks.forEach((task, index) => {
-        novaLI = novaLI + `
-             <li class="task ${task.fechada && "done"}">
-             <img src="./img/done.png" alt="check-na-tarefa" onclick= "fecharTask(${index})">
-             <p>${task.tarefa}</p>
-             <img src="./img/lixo.png" alt="tarefa-para-o-lixo" onclick = "deletarTask(${index})">
-         </li>`
-    })
-    allTasks.innerHTML = novaLI
-
-}
-
-
-function deletarTask(index){
-    minhasTasks.splice(index, 1)
-    
-    mostrarTasks()
-}
-
-
-function fecharTask(index){
-    minhasTasks[index].fechada = !minhasTasks[index].fechada
-    // console.log(index)
-    mostrarTasks()
-
-}
-
-button.addEventListener('click', adicionaTask)
-
-//TelaPrincipal
+//NavBar
 class MobileNavbar{
 constructor(mobileMenu, navList, navLinks){
    this.mobileMenu = document.querySelector(mobileMenu);

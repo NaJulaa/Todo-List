@@ -42,23 +42,23 @@ body{
 input{
     width: 250px;
     height: 25px;
-    border-radius: 10px;
     padding: 0 20px 0 20px;
     background-color: rgb(187, 186, 186);
-    border: 0;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 20px;
 }
 
 button{
     width: 150px;
     height: 25px;
-    border-radius: 10px;
-    border: 0;
     padding: 0 20px 0 20px;
     background-color: rgb(132, 216, 132);
     cursor: pointer;
     transition: .2s;
     box-shadow: 0 0 8px rgb(134, 189, 50);
     transform: scale(1.05);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
 }
 
   .sidebar {
@@ -100,12 +100,6 @@ button{
   }
 
 
-TelaCadastro *{
-    margin: 0 auto 0 auto;
-    padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .form-box{
   position: absolute;
   top: 50%;
@@ -114,23 +108,19 @@ TelaCadastro *{
   width: 400px;
   height: 450px;
   background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
   backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 20px;
 }
 
-TelaCadastro h1{
+.login h1{
     margin-top: 40px;
     margin-bottom:  40px;
 }
 
-TelaCadastro body{
-    background-color: bisque;
-    background-image: url('./img/back1.png');
-}
 
 .cadastro, form{
     gap: 20px;
@@ -141,23 +131,32 @@ TelaCadastro body{
     
 }
 
-TelaCadastro input{
-    width: 300px;
-    height: 25px ;
-    border-radius: 30px ;
-    padding: 0 20px 0 20px;
-    border: 0; 
-    background-color: rgb(187, 186, 186);
-}
 
-TelaCadastro button{
+.cadastrar{
     width: 150px;
     height: 30px;
-    border-radius: 20px;
-    border: 0;
     background-color: rgb(132, 216, 132);
     cursor: pointer;
     transition: .2s;
     box-shadow: 0 0 8px rgb(134, 189, 50);
     transform: scale(1.05);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+.nome{
+  background-image: url(./img/user.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+}
+
+input.senha{
+  background-image: url(./img/cadeado.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+}
+
+input.email{
+  background-image: url(./img/email.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
 }
